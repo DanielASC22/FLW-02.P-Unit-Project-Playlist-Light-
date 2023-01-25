@@ -1,0 +1,90 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  background-color: rgb(80,32,32);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.display {
+  display: flex;
+  justify-content: space-around;
+  border-top: 5px solid #781f0e;
+  border-bottom: 5px solid #781f0e;
+  padding: 25px
+}
+
+.heading {
+  display: flex;
+  justify-content: space-around;
+  border-top: 5px solid #781f0e;
+  background-color: rgba(80, 32, 32, 0.3)
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.display-image img {
+  display: block;
+  height: 100px;
+  width: auto;
+  
+}
+
+.display-song p {
+  font-size: 18px;
+  height: 100px;
+  font-weight: bold;
+  
+}
+
+.display-artist p {
+  font-size: 18px;
+  height: 100px;
+  
+}
+
+
+.display-link a {
+  display: block;
+  font-size: 18px;
+  height: 100px;
+  font-weight: bold;
+  
+}
+
+.form {
+  width: 75%;
+  margin: 0 auto 20px auto;
+  font-size: 18px;
+}
+
+input {
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #000000;
+}
+
+
+button {
+  font-size: 14px;
+  padding: 5px 10px;
+  color: black;
+}
+
+body {
+  background-color: rgba(232,190,81);
+color: black;
+}
+
+h4{
+  color: black;
+}
