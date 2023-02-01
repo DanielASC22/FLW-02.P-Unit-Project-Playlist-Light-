@@ -12,20 +12,22 @@ let add = document.querySelector(".add");
 
 
 // task 6: declare variables for your display divs: the image url, song name, artist, and song link. Go back to the HTML to check that you are using the correct class names.
-let imageUrl = document.getElementsByClassName('display-img');
+let imageUrl = document.getElementsByClassName('display-image')[0];
 let songUrl = document.getElementsByClassName('display-song');
 let artistUrl = document.getElementsByClassName('display-artist');
 let linkUrl = document.getElementsByClassName('display-link');
 
 // task 7: create and populate an array to store your image urls. Create three more arrays. One to store your song names, one for the artists, and a last one for the song links.
 
-let imageArray = ['https://i.scdn.co/image/ab67616d0000b2731799269cdb2d88e373e51829', 'https://m.media-amazon.com/images/I/51fIi1rEGPL._SY1000_.jpg', 'https://i.ytimg.com/vi/PPQP23fjLAM/maxresdefault.jpg', 'https://upload.wikimedia.org/wikipedia/en/e/e8/Heat_Wave_%28Ahmad_Jamal_album%29.jpg', 'https://upload.wikimedia.org/wikipedia/en/2/22/Palmystery.jpg'];
+
+let imageArray = ['https://i.scdn.co/image/ab67616d0000b2731799269cdb2d88e373e51829', 'https://m.media-amazon.com/images/I/51fIi1rEGPL._SY1000_.jpg', 'Pressure.png', 'https://upload.wikimedia.org/wikipedia/en/e/e8/Heat_Wave_%28Ahmad_Jamal_album%29.jpg', 'https://upload.wikimedia.org/wikipedia/en/2/22/Palmystery.jpg'];
 
 let songArray = ['Guataca City', 'Reincarnation of a Lovebird', 'Pressure Point', 'April in Paris', 'Song For My Father'];
 
 let artistArray = ['Paquito d’Rivera', 'Charles Mingus', 'Duncan Lamont', 'Ahmad Jamal', 'Victor Wooten'];
 
 let linkArray = ['https://www.youtube.com/watch?v=e5zQaOmZJBM&list=PL-MocxyEd37RsnRwsbdN50wKkeEePEZ-6&index=15','https://www.youtube.com/watch?v=rijuSUZo-w0&list=PL-MocxyEd37RsnRwsbdN50wKkeEePEZ-6&index=15','https://www.youtube.com/watch?v=GD7Zq-t-_xc&list=PL-MocxyEd37RsnRwsbdN50wKkeEePEZ-6 ','https://www.youtube.com/watch?v=Vv7MUtIwxKg&list=PL-MocxyEd37RsnRwsbdN50wKkeEePEZ-6 ','https://www.youtube.com/watch?v=bS7vUBixOcc',]
+
 
 //REFACTOR ARRAYS DAY 
 // task 11: comment out the arrays data.
@@ -70,8 +72,9 @@ function emptyDisplay() {
 function displaySongInfo() {
 
 // task 8: loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
-
-
+for (let i = 0; i < imageArray.length; i++) {
+  imageUrl.insertAdjacentHTML('beforeend', `<img src=${imageArray[i]}>`)
+}
 
 }
 

@@ -10,28 +10,28 @@ They will use .push to add new songs to their playlist. Then, students will refa
 
 
 ## Set-Up
-1. [ ] Fork your own copy of the repl.
-2. [ ] Double-check that you are signed in with your GitHub account.
+1. [ X] Fork your own copy of the repl.
+2. [ X] Double-check that you are signed in with your GitHub account.
 
 
 ## Planning
-3. [ ] Complete the planning document.
-   - [ ] Look over Inspiration and Ideas
-   - [ ] Fill out the Brainstorm section.
-   - [ ] Fill out the Song Data section.
-4. [ ] Read through the HTML starter code to understand the organization and class names given.
-5. [ ] Read through the JavaScript starter code to determine where each given function is declared and where each given function is called.
-6. [ ] Declare variables for your display divs: the image url, song name, artist, and song link. Go back to the HTML to check that you are using the correct class names.
+3. [ X] Complete the planning document.
+   - [ X] Look over Inspiration and Ideas
+   - [X ] Fill out the Brainstorm section.
+   - [ X] Fill out the Song Data section.
+4. [ X] Read through the HTML starter code to understand the organization and class names given.
+5. [X ] Read through the JavaScript starter code to determine where each given function is declared and where each given function is called.
+6. [ X] Declare variables for your display divs: the image url, song name, artist, and song link. Go back to the HTML to check that you are using the correct class names.
 
 
 ## JavaScript: Storing Song Data
 
-7. [ ] Create and populate an array to store your image urls. Create three more arrays. One to store your song names, one for the artists, and a last one for the song links.
+7. [ X] Create and populate an array to store your image urls. Create three more arrays. One to store your song names, one for the artists, and a last one for the song links.
 
 
 ## JavaScript: Loop and Display Data
 
-8. [ ] Loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
+8. [X ] Loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
 
 What to display your song data in:
 
