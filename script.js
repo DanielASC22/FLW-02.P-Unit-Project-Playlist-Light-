@@ -13,27 +13,64 @@ let add = document.querySelector(".add");
 
 // task 6: declare variables for your display divs: the image url, song name, artist, and song link. Go back to the HTML to check that you are using the correct class names.
 let imageUrl = document.getElementsByClassName('display-image')[0];
+console.log(imageUrl);
 let songUrl = document.getElementsByClassName('display-song');
+console.log(songUrl);
 let artistUrl = document.getElementsByClassName('display-artist');
 let linkUrl = document.getElementsByClassName('display-link');
 
 // task 7: create and populate an array to store your image urls. Create three more arrays. One to store your song names, one for the artists, and a last one for the song links.
 
-
+/*
 let imageArray = ['https://i.scdn.co/image/ab67616d0000b2731799269cdb2d88e373e51829', 'https://m.media-amazon.com/images/I/51fIi1rEGPL._SY1000_.jpg', 'Pressure.png', 'https://upload.wikimedia.org/wikipedia/en/e/e8/Heat_Wave_%28Ahmad_Jamal_album%29.jpg', 'https://upload.wikimedia.org/wikipedia/en/2/22/Palmystery.jpg'];
 
 let songArray = ['Guataca City', 'Reincarnation of a Lovebird', 'Pressure Point', 'April in Paris', 'Song For My Father'];
 
 let artistArray = ['Paquito d’Rivera', 'Charles Mingus', 'Duncan Lamont', 'Ahmad Jamal', 'Victor Wooten'];
 
-let linkArray = ['https://www.youtube.com/watch?v=e5zQaOmZJBM&list=PL-MocxyEd37RsnRwsbdN50wKkeEePEZ-6&index=15','https://www.youtube.com/watch?v=rijuSUZo-w0&list=PL-MocxyEd37RsnRwsbdN50wKkeEePEZ-6&index=15','https://www.youtube.com/watch?v=GD7Zq-t-_xc&list=PL-MocxyEd37RsnRwsbdN50wKkeEePEZ-6 ','https://www.youtube.com/watch?v=Vv7MUtIwxKg&list=PL-MocxyEd37RsnRwsbdN50wKkeEePEZ-6 ','https://www.youtube.com/watch?v=bS7vUBixOcc',]
+let linkArray = ['https://www.youtube.com/watch?v=e5zQaOmZJBM&list=PL-MocxyEd37RsnRwsbdN50wKkeEePEZ-6&index=15', 'https://www.youtube.com/watch?v=rijuSUZo-w0&list=PL-MocxyEd37RsnRwsbdN50wKkeEePEZ-6&index=15', 'https://www.youtube.com/watch?v=GD7Zq-t-_xc&list=PL-MocxyEd37RsnRwsbdN50wKkeEePEZ-6 ', 'https://www.youtube.com/watch?v=Vv7MUtIwxKg&list=PL-MocxyEd37RsnRwsbdN50wKkeEePEZ-6 ', 'https://www.youtube.com/watch?v=bS7vUBixOcc',] */
 
 
 //REFACTOR ARRAYS DAY 
 // task 11: comment out the arrays data.
 // task 12: create an object for each of your songs.
+let guatacaCity = {
+  name: "Guataca City",
+  image: "https://lastfm.freetls.fastly.net/i/u/300x300/9b8078ccc914497f9af6122e8fa9b286.jpg",
+  link: "https://www.youtube.com/watch?v=e5zQaOmZJBM&list=PL-MocxyEd37RsnRwsbdN50wKkeEePEZ-6&index=15",
+  artist: "Paquito d’Rivera" 
+};
+
+let reincarnationOfALovebird = {
+  name: "Reincarnation of a Lovebird",
+  image: "https://m.media-amazon.com/images/I/51fIi1rEGPL._SY1000_.jpg",
+  link: "https://www.youtube.com/watch?v=rijuSUZo-w0&list=PL-MocxyEd37RsnRwsbdN50wKkeEePEZ-6&index=15",
+  artist: "Charles Mingus"
+};
+
+let pressurePoint = {
+  name: "Pressure Point",
+  image: 'Pressure.png',
+  link: 'https://www.youtube.com/watch?v=GD7Zq-t-_xc&list=PL-MocxyEd37RsnRwsbdN50wKkeEePEZ-6',
+  artist: 'Duncan Lamont'
+};
+
+let aprilInParis = {
+  name: 'April in Paris',
+  image: 'https://upload.wikimedia.org/wikipedia/en/e/e8/Heat_Wave_%28Ahmad_Jamal_album%29.jpg',
+  link: 'https://www.youtube.com/watch?v=Vv7MUtIwxKg&list=PL-MocxyEd37RsnRwsbdN50wKkeEePEZ-6',
+  artist: 'Ahmad Jamal'
+};
+
+let songForMyFather = {
+  name: 'Song For My Father',
+  image: 'https://upload.wikimedia.org/wikipedia/en/2/22/Palmystery.jpg',
+  link: 'https://www.youtube.com/watch?v=bS7vUBixOcc',
+  artist: 'Victor Wooten'
+};
 // task 13: inside each object, add key/value pairs to store the image url, song name, artist, and song link.
 // task 14: create an array that stores all of the objects.
+let songInfo = [guatacaCity, reincarnationOfALovebird, pressurePoint, aprilInParis, songForMyFather];
 
 
 
@@ -48,11 +85,18 @@ let linkArray = ['https://www.youtube.com/watch?v=e5zQaOmZJBM&list=PL-MocxyEd37R
 
 function addSongInfo() {
 
-// task 9: declare a variable to save the user input of the image url. Declare three more variables that save user input: One for the song names, one for the artists, and a last one for the song links.
+  // task 9: declare a variable to save the user input of the image url. Declare three more variables that save user input: One for the song names, one for the artists, and a last one for the song links.
+  let userImageInput = image.value;
+  let userSongInput = songName.value;
+  let userArtistInput = artist.value;
+  let userLinkInput = songLink.value;
 
+  // task 10: use `.push()` to add each input value to the correct array.
 
-// task 10: use `.push()` to add each input value to the correct array.
-
+  imageArray.push(userImageInput);
+  songArray.push(userSongInput);
+  artistArray.push(userArtistInput);
+  linkArray.push(userLinkInput);
 }
 
 
@@ -71,11 +115,23 @@ function emptyDisplay() {
 
 function displaySongInfo() {
 
-// task 8: loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
-for (let i = 0; i < imageArray.length; i++) {
-  imageUrl.insertAdjacentHTML('beforeend', `<img src=${imageArray[i]}>`)
-}
-
+  // task 8: loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
+  
+  //To-Do & Hint
+  //Loop through the new array variable you created on line 73 songInfo
+  //
+  for (let i = 0; i < imageArray.length; i++) {
+    imageUrl.insertAdjacentHTML('beforeend', `<img src=${imageArray[i]}>`);
+  }
+  for (let i = 0; i < songArray.length; i++) {
+    songUrl.insertAdjacentHTML('beforeend', `<p> ${songArray[i]}</p>`);
+  }
+  for (let i = 0; i < artistArray.length; i++) {
+    artistUrl.insertAdjacentHTML('beforeend', `<p> ${artistArray[i]}</p>`);
+  }
+  for (let i = 0; i < linkArray.length; i++) {
+    linkUrl.insertAdjacentHTML('beforeend', `<p> ${linkArray[i]}</p>`);
+  }
 }
 
 
