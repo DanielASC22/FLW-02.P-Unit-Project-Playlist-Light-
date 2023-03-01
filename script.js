@@ -14,10 +14,10 @@ let add = document.querySelector(".add");
 // task 6: declare variables for your display divs: the image url, song name, artist, and song link. Go back to the HTML to check that you are using the correct class names.
 let imageUrl = document.getElementsByClassName('display-image')[0];
 console.log(imageUrl);
-let songUrl = document.getElementsByClassName('display-song');
+let songUrl = document.getElementsByClassName('display-song')[0];
 console.log(songUrl);
-let artistUrl = document.getElementsByClassName('display-artist');
-let linkUrl = document.getElementsByClassName('display-link');
+let artistUrl = document.getElementsByClassName('display-artist')[0];
+let linkUrl = document.getElementsByClassName('display-link')[0];
 
 // task 7: create and populate an array to store your image urls. Create three more arrays. One to store your song names, one for the artists, and a last one for the song links.
 
@@ -86,17 +86,21 @@ let songInfo = [guatacaCity, reincarnationOfALovebird, pressurePoint, aprilInPar
 function addSongInfo() {
 
   // task 9: declare a variable to save the user input of the image url. Declare three more variables that save user input: One for the song names, one for the artists, and a last one for the song links.
-  let userImageInput = image.value;
-  let userSongInput = songName.value;
-  let userArtistInput = artist.value;
-  let userLinkInput = songLink.value;
+  let userSong = {
+    name: '',
+    image: '',
+    link: '',
+    artist: ''
+  }
+  
+  let userImageInput = userSong.image;
+  let userSongInput = userSong.name;
+  let userArtistInput = userSong.artist;
+  let userLinkInput = userSong.link;
 
   // task 10: use `.push()` to add each input value to the correct array.
 
-  imageArray.push(userImageInput);
-  songArray.push(userSongInput);
-  artistArray.push(userArtistInput);
-  linkArray.push(userLinkInput);
+  songInfo.push(userSong);
 }
 
 
@@ -120,17 +124,26 @@ function displaySongInfo() {
   //To-Do & Hint
   //Loop through the new array variable you created on line 73 songInfo
   //
-  for (let i = 0; i < imageArray.length; i++) {
-    imageUrl.insertAdjacentHTML('beforeend', `<img src=${imageArray[i]}>`);
+
+  //image
+  for (let i = 0; i < songInfo.length; i++) {
+    imageUrl.insertAdjacentHTML('beforeend', `<p> <img src=${songInfo[i].image}> </p>`);
   }
-  for (let i = 0; i < songArray.length; i++) {
-    songUrl.insertAdjacentHTML('beforeend', `<p> ${songArray[i]}</p>`);
+
+  //song name
+
+  for (let i = 0; i < songInfo.length; i++) {
+    songUrl.insertAdjacentHTML('beforeend', `<p>${songInfo[i].name}</p>`)
   }
-  for (let i = 0; i < artistArray.length; i++) {
-    artistUrl.insertAdjacentHTML('beforeend', `<p> ${artistArray[i]}</p>`);
+
+  //artist
+  for (let i = 0; i < songInfo.length; i++) {
+    artistUrl.insertAdjacentHTML('beforeend', `<p> ${songInfo[i].artist}</p>`);
   }
-  for (let i = 0; i < linkArray.length; i++) {
-    linkUrl.insertAdjacentHTML('beforeend', `<p> ${linkArray[i]}</p>`);
+
+  //link
+  for (let i = 0; i < songInfo.length; i++) {
+    linkUrl.insertAdjacentHTML('beforeend', `<a> ${songInfo[i].link}</a>`);
   }
 }
 
